@@ -11,7 +11,7 @@
   "rules": {
     "no-alert": ["error"],
     "no-debugger": ["error"],
-    "no-console": ["warning"],
+    "no-console": ["error"],
     "no-undef": ["error"],
     "max-len": ["error", { "code": 1200 }],
     "arrow-parens": [2, "as-needed"]

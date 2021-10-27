@@ -1,6 +1,7 @@
+import {ReactElement} from 'react';
 import {Home as Styles} from './index.styles';
 
-const Home = (): JSX.Element => {
+const Home = (): ReactElement => {
   return (
     <Styles.Container>
       <h1>Soy la home</h1>

@@ -1,16 +1,19 @@
+import {ReactElement} from 'react';
 import {Login as Styles} from './index.styles';
 
 type AuthConfig = {
+  // eslint-disable-next-line camelcase
   response_type: string;
+  // eslint-disable-next-line camelcase
   client_id: string;
+  // eslint-disable-next-line camelcase
   redirect_uri: string;
 };
 
-const AUTH_URL_BASE: string = 'https://accounts.spotify.com/authorize';
-
-const AUTH_RESPONSE_TYPE: string = 'code';
-const AUTH_CLIENT_ID: string = '9d689990aa97409198ba3f41bf380735';
-const AUTH_REDIRECT_URI: string = 'http://localhost:3000';
+const AUTH_URL_BASE = 'https://accounts.spotify.com/authorize';
+const AUTH_RESPONSE_TYPE = 'code';
+const AUTH_CLIENT_ID = '9d689990aa97409198ba3f41bf380735';
+const AUTH_REDIRECT_URI = 'http://localhost:3000';
 
 const AUTH_CONFIG: AuthConfig = {
   response_type: AUTH_RESPONSE_TYPE,
@@ -25,9 +28,9 @@ const queryStringifier = (query: AuthConfig): string =>
     .map(item => item.join('='))
     .join('&');
 
-const AUTH_URL: string = `${AUTH_URL_BASE}?${queryStringifier(AUTH_CONFIG)}`;
+const AUTH_URL = `${AUTH_URL_BASE}?${queryStringifier(AUTH_CONFIG)}`;
 
-const Login = (): JSX.Element => {
+const Login = (): ReactElement => {
   return (
     <Styles.Container>
       <h1>Soy la Login</h1>
