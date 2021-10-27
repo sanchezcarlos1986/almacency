@@ -9,8 +9,9 @@
   "plugins": ["@typescript-eslint", "prettier", "jest"],
   "extends": ["plugin:@typescript-eslint/recommended", "google", "prettier", "next/core-web-vitals"],
   "rules": {
-    "no-alert": "error",
-    "no-debugger": "error",
+    "no-alert": ["error"],
+    "no-debugger": ["error"],
+    "no-console": ["warning"],
     "no-undef": ["error"],
     "max-len": ["error", { "code": 1200 }],
     "arrow-parens": [2, "as-needed"]
