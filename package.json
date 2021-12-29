@@ -67,6 +67,7 @@
     "typescript": "^4.4.4"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   }
 }
